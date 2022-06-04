@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "serviceBus": {
+    "maxConcurrentCalls": 1,
+    "maxConcurrentSessions": 1,
+    "maxMessageBatchSize": 1,
+    "messageHandlerOptions": {
+      "maxConcurrentCalls": 1
+    },
+    "sessionHandlerOptions": {
+      "maxConcurrentSessions": 1
+    },
+    "batchOptions": {
+      "maxMessageCount": 1
+    }
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "durableTask": {
+    "hubName": "%FunctionTaskHub%",
+    "maxConcurrentActivityFunctions": 1,
+    "maxConcurrentOrchestratorFunctions": 1,
+    "maxEntityOperationBatchSize": 1
+  }
+
+}
